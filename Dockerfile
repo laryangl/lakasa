@@ -1,7 +1,7 @@
-FROM TH7RM/yoland:latest
+FROM THHBOB/lakasa:latest
 
 #clonning repo 
-RUN git clone https://github.com/TH7RM/yoland.git /root/userbot
+RUN git clone https://github.com/THHBOB/lakasa.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
