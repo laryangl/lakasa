@@ -48,6 +48,14 @@ UNBAN_RIGHTS = ChatBannedRights(
 async def catgban(event):
     if event.fwd_from:
         return
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        await event.client(GetFullUserRequest(reply_message.sender_id))
+        idd = reply_message.sender_id
+        if idd == 1492765943:
+            await edit_or_reply(
+                event, "This is My Master\nI can't hack my master's Account"
+            )
     cate = await edit_or_reply(event, "جـآڒٍي آلـحــ۫͜ـظًڒٍ")
     start = datetime.now()
     user, reason = await get_user_from_event(event, cate)
