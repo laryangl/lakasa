@@ -23,8 +23,8 @@ from telethon.utils import get_input_location
 from . import BOTLOG, BOTLOG_CHATID, get_user_from_event
 
 
-@bot.on(admin_cmd(pattern="adminperm(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="adminperm(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="الصلاحيات(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="الصلاحيات(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -48,13 +48,13 @@ async def _(event):
             f"{_format.mentionuser(user.first_name ,user.id)} `is not admin of this this {event.chat.title} chat`",
         )
     output = f"**Admin rights of **{_format.mentionuser(user.first_name ,user.id)} **in {event.chat.title} chat are **\n"
-    output += f"__Change info :__ {c_info}\n"
-    output += f"__Delete messages :__ {del_me}\n"
-    output += f"__Ban users :__ {ban}\n"
-    output += f"__Invite users :__ {invite_u}\n"
-    output += f"__Pin messages :__ {pin}\n"
-    output += f"__Add admins :__ {add_a}\n"
-    output += f"__Manage call :__ {call}\n"
+    output += f"__تغير المعلومات :__ {c_info}\n"
+    output += f"__حذف الرسائل :__ {del_me}\n"
+    output += f"__حظر المستخدمين :__ {ban}\n"
+    output += f"__دعوه عبر الرابط :__ {invite_u}\n"
+    output += f"__تثبيت الرسائل :__ {pin}\n"
+    output += f"__اضافه مشرفين جدد :__ {add_a}\n"
+    output += f"__ادارة المكالمات :__ {call}\n"
     await edit_or_reply(event, output)
 
 
