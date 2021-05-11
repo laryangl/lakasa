@@ -168,7 +168,9 @@ async def get_users(show):
             chat = await show.client.get_entity(input_str)
         except Exception as e:
             await edit_delete(show, f"`{str(e)}`", 10)
-    catevent = await edit_or_reply(show, "**⪼ٖ الحصول على قائمه المستخدميـن انتظر ..**  ")
+    catevent = await edit_or_reply(
+        show, "**⪼ٖ الحصول على قائمه المستخدميـن انتظر ..**  "
+    )
     try:
         if not show.pattern_match.group(1):
             async for user in show.client.iter_participants(show.chat_id):
