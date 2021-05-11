@@ -170,7 +170,6 @@ async def promote(promt):
         change_info=True,
         ban_users=True,
         delete_messages=True,
-        Manage_call=True,
         pin_messages=True,
     )
     catevent = await edit_or_reply(promt, "**╮ ❐  جـاري ࢪفعه مالك  ❏╰**")
