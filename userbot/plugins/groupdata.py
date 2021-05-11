@@ -47,7 +47,7 @@ async def _(event):
             event,
             f"{_format.mentionuser(user.first_name ,user.id)} `is not admin of this this {event.chat.title} chat`",
         )
-    output = f"**صلاحيات **{_format.mentionuser(user.first_name ,user.id)}  **\n"
+    output = f"**صلاحيات **{_format.mentionuser(user.first_name ,user.id)} \n"
     output += f"__تغير المعلومات :__ {c_info}\n"
     output += f"__حذف الرسائل :__ {del_me}\n"
     output += f"__حظر المستخدمين :__ {ban}\n"
