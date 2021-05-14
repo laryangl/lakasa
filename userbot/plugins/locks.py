@@ -11,8 +11,8 @@ from . import BOTLOG, get_user_from_event
 from .sql_helper.locks_sql import get_locks, is_locked, update_lock
 
 
-@bot.on(admin_cmd(pattern=r"lock (.*)"))
-@bot.on(sudo_cmd(pattern=r"lock (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"قفل (.*)"))
+@bot.on(sudo_cmd(pattern=r"قفل (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
