@@ -16,10 +16,8 @@ heroku_api = "https://api.heroku.com"
 
 UPSTREAM_REPO_BRANCH = Config.UPSTREAM_REPO_BRANCH
 
-if Config.UPSTREAM_REPO == "goodcat":
-    UPSTREAM_REPO_URL = "https://github.com/sandy1709/catuserbot"
-elif Config.UPSTREAM_REPO == "badcat":
-    UPSTREAM_REPO_URL = "https://github.com/Jisan09/catuserbot"
+if Config.UPSTREAM_REPO == "lakasa":
+    UPSTREAM_REPO_URL = "https://github.com/THHBOB/lakasa"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
@@ -237,7 +235,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
 @bot.on(sudo_cmd(pattern="update deploy$", allow_sudo=True))
 async def upstream(event):
     event = await edit_or_reply(event, "`Pulling the catpack repo wait a sec ....`")
-    off_repo = "https://github.com/Mr-confused/catpack"
+    off_repo = "https://github.com/THHBOB/catpack"
     os.chdir("/app")
     catcmd = f"rm -rf .git"
     try:
