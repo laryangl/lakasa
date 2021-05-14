@@ -158,7 +158,7 @@ async def on_afk(event):
             )
 
 
-@bot.on(admin_cmd(pattern=r"afk ?(.*)", outgoing=True))
+@bot.on(admin_cmd(pattern=r"افاك ?(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -203,7 +203,7 @@ async def _(event):
                 )
 
 
-@bot.on(admin_cmd(pattern=r"mafk ?(.*)", outgoing=True))
+@bot.on(admin_cmd(pattern=r"افاك2 ?(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
