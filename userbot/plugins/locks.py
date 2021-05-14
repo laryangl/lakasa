@@ -170,8 +170,8 @@ async def _(event):
             )
 
 
-@bot.on(admin_cmd(pattern="unlock (.*)"))
-@bot.on(sudo_cmd(pattern="unlock (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="فتح (.*)"))
+@bot.on(sudo_cmd(pattern="فتح (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
