@@ -49,8 +49,8 @@ async def _(event):
     await event.delete()
 
 
-@bot.on(admin_cmd(pattern="رابط (.*)"))
-@bot.on(sudo_cmd(pattern="رابط (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="لنك (.*)"))
+@bot.on(sudo_cmd(pattern="لنك (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
