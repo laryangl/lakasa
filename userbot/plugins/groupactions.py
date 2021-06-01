@@ -132,8 +132,8 @@ async def _(event):
     )
 
 
-@bot.on(admin_cmd(pattern="unbanall ?(.*)"))
-@bot.on(sudo_cmd(pattern="unbanall ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="رفع القيود ?(.*)"))
+@bot.on(sudo_cmd(pattern="رفع القيود ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
