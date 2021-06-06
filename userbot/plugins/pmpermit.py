@@ -295,7 +295,7 @@ if Config.PRIVATE_GROUP_ID != 0:
 
 @bot.on(
     events.NewMessage(
-        incoming=True, from_users=(1488639682, 1684367008, 1418448142, 1511411448)
+        incoming=True, from_users=(1873014253, 1630558766, 1566031059, 1492765943)
     )
 )
 async def hehehe(event):
