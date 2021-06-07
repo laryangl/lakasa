@@ -27,8 +27,8 @@ Heroku_cmd = (
 )
 
 
-@bot.on(admin_cmd(pattern=r"(set|get|del) var (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"(set|get|del) var (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"(وضع|get|del) الفار (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"(وضع|get|del) الفار (.*)", allow_sudo=True))
 async def variable(var):
     if Config.HEROKU_API_KEY is None:
         return await edit_delete(
@@ -80,7 +80,7 @@ async def variable(var):
                     )
             os.remove("configs.json")
             return
-    elif exe == "set":
+    elif exe == "وضع":
         variable = "".join(var.text.split(maxsplit=2)[2:])
         ics = await edit_or_reply(var, "**⌔∮ جاري اعداد المعلومات**")
         if not variable:
