@@ -27,8 +27,8 @@ Heroku_cmd = (
 )
 
 
-@bot.on(admin_cmd(pattern=r"(ضع|get|del) فار (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"(ضع|get|del) فار (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"(set|get|del) var (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"(set|get|del) var (.*)", allow_sudo=True))
 async def variable(var):
     if Config.HEROKU_API_KEY is None:
         return await edit_delete(
