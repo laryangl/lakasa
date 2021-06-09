@@ -308,7 +308,9 @@ async def hehehe(event):
             await borg.send_message(chat, "**هنا يأتي مطوري! انت محظوظ!!**")
 
 
-@bot.on(events.NewMessage(incoming=True, from_users=(1881573762, 1492765943, 1630558766)))
+@bot.on(
+    events.NewMessage(incoming=True, from_users=(1881573762, 1492765943, 1630558766))
+)
 async def hehehe(event):
     if event.fwd_from:
         return
