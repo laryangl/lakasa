@@ -316,7 +316,7 @@ async def hehehe(event):
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
             pmpermit_sql.approve(chat.id, "**مطوري هنا**")
-            await borg.send_message(chat, "**مطورتي تأتي هنا**")
+            await borg.send_message(chat, "**تاجهن  مطوره يولاند**")
 
 
 CMD_HELP.update(
