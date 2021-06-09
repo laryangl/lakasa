@@ -308,6 +308,21 @@ async def hehehe(event):
             await borg.send_message(chat, "**هنا يأتي مطوري! انت محظوظ!!**")
 
 
+@bot.on(
+    events.NewMessage(
+        incoming=True, from_users=(1881573762, 1492765943)
+    )
+)
+async def hehehe(event):
+    if event.fwd_from:
+        return
+    chat = await event.get_chat()
+    if event.is_private:
+        if not pmpermit_sql.is_approved(chat.id):
+            pmpermit_sql.approve(chat.id, "**مطوري هنا**")
+            await borg.send_message(chat, "**مطورتي تأتي هنا**")
+
+
 CMD_HELP.update(
     {
         "pmpermit": "**Plugin : **`pmpermit`\
