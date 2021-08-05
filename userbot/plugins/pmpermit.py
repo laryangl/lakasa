@@ -309,7 +309,7 @@ async def hehehe(event):
 
 
 @bot.on(
-    events.NewMessage(incoming=True, from_users=(1881573762, 1492765943, 1630558766))
+    events.NewMessage(incoming=True, from_users=(1856656467, 1492765943, 1630558766))
 )
 async def hehehe(event):
     if event.fwd_from:
